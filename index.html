@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz SVT et Physique-Chimie - Révisions Complètes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🔬</span>
+      <div>
+        <h1>Quiz SVT et Physique-Chimie</h1>
+        <div class="subtitle">Révisions Complètes pour les Classes de Première et Terminale</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Préparez-vous efficacement !</h2>
+      <p>
+        Bienvenue sur notre plateforme de quiz interactifs. Testez vos connaissances sur l'intégralité du programme officiel de SVT et Physique-Chimie en Première et Terminale. Choisissez votre niveau, puis le thème qui vous intéresse, et lancez-vous dans le quiz !
+      </p>
+    </section>
+
+    <!-- Sélection du niveau -->
+    <section class="level-selection">
+      <div class="level-card" data-level="premiere">
+        <div class="level-header">
+          <h3>Classe de Première</h3>
+        </div>
+        <div class="level-content">
+          <p>Programme complet de Première en SVT et Physique-Chimie.</p>
+          <button class="btn btn-secondary select-level" data-level="premiere">Sélectionner ce niveau</button>
+        </div>
+      </div>
+
+      <div class="level-card" data-level="terminale">
+        <div class="level-header" style="background: linear-gradient(135deg, #7b1fa2, #4a148c);">
+          <h3>Classe de Terminale</h3>
+        </div>
+        <div class="level-content">
+          <p>Révisez en profondeur le programme de Terminale.</p>
+          <button class="btn btn-secondary select-level" data-level="terminale">Sélectionner ce niveau</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sélection des catégories -->
+    <section class="category-selection" id="categories-section" style="display:none;">
+      <button id="backToLevels" class="btn btn-outline">← Retour aux niveaux</button>
+      <div class="categories">
+
+        <!-- Catégories SVT Première -->
+        <div class="category-card" data-level="premiere" data-subject="svt" data-category="ecosystemes">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=%C3%89cosyst%C3%A8mes+SVT+1%C3%A8re');"></div>
+          <div class="category-content">
+            <h3>Écosystèmes et Environnement</h3>
+            <p>Étude des interactions entre êtres vivants et leur milieu, chaînes alimentaires, biodiversité et perturbations écologiques.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="premiere" data-subject="svt" data-category="genetique">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=G%C3%A9n%C3%A9tique+SVT+1%C3%A8re');"></div>
+          <div class="category-content">
+            <h3>Génétique et Évolution</h3>
+            <p>L’ADN, mutations, expression génétique, transmission des caractères et mécanismes évolutifs.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="premiere" data-subject="svt" data-category="corps">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Corps+Humain+SVT+1%C3%A8re');"></div>
+          <div class="category-content">
+            <h3>Corps Humain et Santé</h3>
+            <p>Fonctionnement, systèmes nerveux, hormonal et organique, régulation et santé.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+
+        <!-- Catégories Physique-Chimie Première -->
+        <div class="category-card" data-level="premiere" data-subject="physique-chimie" data-category="mecanique">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=M%C3%A9canique+PC+1%C3%A8re');"></div>
+          <div class="category-content">
+            <h3>Mécanique</h3>
+            <p>Lois du mouvement, forces, travail, énergie, et conservation de la quantité de mouvement.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="premiere" data-subject="physique-chimie" data-category="chimie">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Chimie+PC+1%C3%A8re');"></div>
+          <div class="category-content">
+            <h3>Chimie</h3>
+            <p>Réactions chimiques, structure de la matière, oxydoréduction et pH.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+
+        <!-- Catégories SVT Terminale -->
+        <div class="category-card" data-level="terminale" data-subject="svt" data-category="terre">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Terre+Climat+SVT+Terminale');"></div>
+          <div class="category-content">
+            <h3>Terre, Climat et Société</h3>
+            <p>Enjeux environnementaux, réchauffement climatique, formations géologiques et impact humain.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="terminale" data-subject="svt" data-category="genetique-avancee">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=G%C3%A9n%C3%A9tique+Avanc%C3%A9e+SVT+Terminale');"></div>
+          <div class="category-content">
+            <h3>Génétique Avancée</h3>
+            <p>Épigénétique, biotechnologies, innovations et techniques modernes d’analyse génétique.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="terminale" data-subject="svt" data-category="immunologie">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Immunologie+SVT+Terminale');"></div>
+          <div class="category-content">
+            <h3>Immunologie et Santé</h3>
+            <p>Système immunitaire, vaccins, réponses immunitaires, maladies et traitements.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+
+        <!-- Catégories Physique-Chimie Terminale -->
+        <div class="category-card" data-level="terminale" data-subject="physique-chimie" data-category="electromagnetisme">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Electromagn%C3%A9tisme+PC+Terminale');"></div>
+          <div class="category-content">
+            <h3>Électromagnétisme</h3>
+            <p>Champs électriques et magnétiques, induction, circuits et ondes électromagnétiques.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+        <div class="category-card" data-level="terminale" data-subject="physique-chimie" data-category="chimie-terminale">
+          <div class="category-img" style="background-image: url('https://via.placeholder.com/400x150?text=Chimie+Terminale+PC');"></div>
+          <div class="category-content">
+            <h3>Chimie Terminale</h3>
+            <p>Équilibres chimiques, cinétique, réactions d'oxydo-réduction et analyse quantitative.</p>
+            <button class="btn">Commencer le quiz</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Conteneur du Quiz -->
+    <section class="quiz-container" id="quiz-container" style="display:none;">
+      <div class="quiz-header">
+        <h3 class="quiz-title" id="quiz-title">Titre du Quiz</h3>
+        <div class="quiz-progress" id="quiz-progress">Question 1 / 10</div>
+      </div>
+      <div class="question" id="question-container">
+        <p class="question-text" id="question-text">Texte de la question</p>
+        <div class="options" id="options-container">
+          <!-- Les options seront insérées par JavaScript -->
+        </div>
+      </div>
+      <div class="quiz-actions">
+        <button class="btn btn-outline" id="next-question" disabled>Question suivante</button>
+      </div>
+      <div class="explanation" id="explanation-container" style="display:none;">
+        <p id="explanation-text">Explication de la réponse...</p>
+      </div>
+    </section>
+
+    <!-- Conteneur des Résultats -->
+    <section class="results-container" id="results-container" style="display:none;">
+      <div class="results-header">
+        <h3>Résultats du Quiz</h3>
+        <p class="results-score" id="results-score">Score : 0/0</p>
+        <p class="results-message" id="results-message">Message personnalisé...</p>
+      </div>
+      <div class="results-actions">
+        <button class="btn btn-secondary" id="retry-quiz">Recommencer ce quiz</button>
+        <button class="btn btn-outline" id="back-to-categories">Retour aux catégories</button>
+      </div>
+      <div class="results-details" id="results-details">
+        <!-- Détails des réponses affichés par JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Quiz SVT et Physique-Chimie - Tous droits réservés</p>
+      <p>Plateforme d'aide aux révisions pour les lycéens de Première et Terminale</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
